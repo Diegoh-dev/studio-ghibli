@@ -57,12 +57,26 @@ p{
     padding: 20px;
 }
 
-.btnOne{
-    background: #658E76;
-    padding: 10px; 
-    display: flex;
-    gap: 10px;
-    border: none;
-    border-radius: 5px;
+.botao{
+    border: none; /*remove borda do elemento button*/
+    color: #fff;
+    position: relative;/*faz os elementos pseudos acompanharem o elemento com a classe*/
+    display: inline-block;
+    background-color: #658E76;
+    line-height: 20px; /*Centraliza o texto*/
+    height: 30px;
+    padding:0 10px;
+    margin: 0 10px;
+     
 }
 
+.botao:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    position: absolute;
+    border-bottom: 30px solid transparent;
+    border-right: 15px solid #658E76;
+    left: -15px;
+}
